@@ -5,7 +5,7 @@ class BinarySearch {
         return binarySearch(nums, 0, nums.size-1, target)
     }
 
-    fun binarySearch(nums : IntArray, start : Int, end : Int, target : Int) : Int{
+    private fun binarySearch(nums : IntArray, start : Int, end : Int, target : Int) : Int{
         if(end < start) return -1
         var middle = findMiddleValue(start, end);
 
