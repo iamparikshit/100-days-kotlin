@@ -18,7 +18,7 @@ class BinarySearch {
         return middle
     }
 
-    private fun findMiddleValue(start: Int, end: Int) = (end+start)/ 2
+    private fun findMiddleValue(start: Int, end: Int) = start + (end - start)/ 2
 
     private fun targetIsSameAsMiddle(nums: IntArray, middle: Int, target: Int) =
         nums[middle] == target
