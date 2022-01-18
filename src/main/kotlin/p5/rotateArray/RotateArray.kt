@@ -1,4 +1,4 @@
-package `5-RotateArray`
+package p5.rotateArray
 //https://leetcode.com/problems/rotate-array/
 class RotateArray {
     fun rotate(array: IntArray, rotateIndex: Int): IntArray {

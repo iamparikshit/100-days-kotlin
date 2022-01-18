@@ -1,4 +1,4 @@
-package `2-Binary-Search`
+package p2.binarySearch
 
 class BinarySearch {
     fun search(nums: IntArray, target: Int): Int {

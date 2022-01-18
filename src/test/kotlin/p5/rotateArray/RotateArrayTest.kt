@@ -1,4 +1,4 @@
-package `5-RotateArray`
+package p5.rotateArray
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals

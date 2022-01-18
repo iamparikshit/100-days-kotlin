@@ -1,4 +1,4 @@
-package `6-MoveZeros`
+package p6.moveZeros
 //https://leetcode.com/problems/move-zeroes/
 //moveZero using 3 ways : with new array, with lamda or without new array
 class MoveZero {

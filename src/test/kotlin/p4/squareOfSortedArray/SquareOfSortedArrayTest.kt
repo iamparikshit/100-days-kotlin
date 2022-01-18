@@ -1,4 +1,4 @@
-package `4-Square-Of-Sorted-Array`
+package p4.squareOfSortedArray
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertContains

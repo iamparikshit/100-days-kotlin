@@ -1,4 +1,4 @@
-package `3-Search-Insert`
+package p3.searchInsert
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals

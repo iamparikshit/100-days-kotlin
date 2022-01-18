@@ -1,4 +1,4 @@
-package `6-MoveZeros`
+package p6.moveZeros
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals

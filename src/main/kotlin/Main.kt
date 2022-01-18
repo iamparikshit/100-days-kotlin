@@ -1,4 +1,4 @@
-import `2-Binary-Search`.BinarySearch
+import p2.binarySearch.BinarySearch
 
 fun main(args: Array<String>) {
     println("Hello World!")

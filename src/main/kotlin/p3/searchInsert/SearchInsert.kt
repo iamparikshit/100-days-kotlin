@@ -1,4 +1,4 @@
-package `3-Search-Insert`
+package p3.searchInsert
 //https://leetcode.com/problems/search-insert-position/
 class SearchInsert {
     fun searchInsert(nums: IntArray, target: Int): Int {

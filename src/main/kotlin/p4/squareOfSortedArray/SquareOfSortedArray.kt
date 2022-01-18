@@ -1,4 +1,4 @@
-package `4-Square-Of-Sorted-Array`
+package p4.squareOfSortedArray
 
 class SquareOfSortedArray {
     fun sortedSquares(nums: IntArray): IntArray {

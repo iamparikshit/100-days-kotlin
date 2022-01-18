@@ -1,4 +1,4 @@
-package `2-Binary-Search`
+package p2.binarySearch
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
