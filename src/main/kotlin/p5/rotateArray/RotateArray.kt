@@ -18,4 +18,3 @@ class RotateArray {
         }
     }
 }
-//added this string, just to revert the commit
