@@ -1,18 +1,18 @@
 package p5.rotateArray
 //https://leetcode.com/problems/rotate-array/
 class RotateArray {
-    fun rotate(array: IntArray, rotateIndex: Int): IntArray {
+    fun rotate(inputArray: IntArray, rotateIndex: Int): IntArray {
         var indexForSlice = 0
-        indexForSlice = if (rotateIndex > array.size) {
-            rotateIndex % array.size
+        indexForSlice = if (rotateIndex > inputArray.size) {
+            rotateIndex % inputArray.size
         } else {
             rotateIndex
         }
         return when (rotateIndex) {
-            0 -> array
+            0 -> inputArray
             else -> {
-                var resultArray = array.copyOfRange(array.size - indexForSlice, array.size)
-                resultArray += array.copyOfRange(0, array.size - indexForSlice)
+                var resultArray = inputArray.copyOfRange(inputArray.size - indexForSlice, inputArray.size)
+                resultArray += inputArray.copyOfRange(0, inputArray.size - indexForSlice)
                 resultArray
             }
         }
