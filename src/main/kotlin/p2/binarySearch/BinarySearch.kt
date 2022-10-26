@@ -13,7 +13,7 @@ class BinarySearch {
             targetIsSameAsMiddle(nums, middle, target) -> middle
             targetIsGreaterThanMiddle(target, nums, middle) -> {middle = binarySearch(nums, middle+1, end, target)}
             targetIsSmallerThanMiddle(target, nums, middle) -> {middle = binarySearch(nums, start, middle-1, target)}
-            else -> {middle = -1}
+            else -> { middle = -1 }
         }
         return middle
     }
