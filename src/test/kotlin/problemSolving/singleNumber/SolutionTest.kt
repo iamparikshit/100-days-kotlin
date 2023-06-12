@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 class SolutionTest{
-    val solution = Solution()
+    private val solution = Solution()
+
     @Test
     fun `should return 1 when 1 ,2, 2, 3,3 are passed`() {
         val expected = 1

@@ -3,11 +3,12 @@ package problemSolving.singleNumber
 class Solution {
     fun singleNumber(array: IntArray): Int {
         val list = mutableListOf<Int>()
-        for (element in array) {
-            if (list.contains(element))
-                list.remove(element)
-            else list.add(element)
+
+        array.iterator().forEach {
+            if(list.contains(it)) list.remove(it)
+            else list.add(it)
         }
+
         return list[0]
     }
 }
