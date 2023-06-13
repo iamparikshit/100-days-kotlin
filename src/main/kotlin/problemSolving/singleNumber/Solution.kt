@@ -2,13 +2,10 @@ package problemSolving.singleNumber
 
 class Solution {
     fun singleNumber(array: IntArray): Int {
-        val list = mutableListOf<Int>()
-
-        array.iterator().forEach {
-            if(list.contains(it)) list.remove(it)
-            else list.add(it)
+        var result = 0
+        for(element in array){
+            result = result xor element
         }
-
-        return list[0]
+        return result
     }
 }
