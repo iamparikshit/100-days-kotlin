@@ -10,4 +10,15 @@ class Solution {
         }
         return count
     }
+
+    fun solveByRightShift(input : Int) : Int{
+        var index = 0
+        var number = input
+        var count = 0
+        while(number != 0){
+            if(number and 1 == 1)count++
+            number = number shr 1
+        }
+        return count
+    }
 }

@@ -10,7 +10,7 @@ class SolutionTest{
     @Test
     fun `should return 3 when 11 is pass as input`() {
         val expected = 3
-        val result = solution.solve(11)
+        val result = solution.solveByRightShift(11)
 
         assertEquals(expected, result)
     }
@@ -18,7 +18,7 @@ class SolutionTest{
     @Test
     internal fun `should return 2 when 6 is pass as input`() {
         val expected = 2
-        val result = solution.solve(6)
+        val result = solution.solveByRightShift(6)
 
         assertEquals(expected, result)
     }
