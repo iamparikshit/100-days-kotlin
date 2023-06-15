@@ -28,6 +28,6 @@ class Solution {
                 secondNumber = secondNumber xor element
             }
         }
-        return intArrayOf(firstNumber, secondNumber)
+        return intArrayOf(Math.min(firstNumber, secondNumber), Math.max(firstNumber, secondNumber))
     }
 }
