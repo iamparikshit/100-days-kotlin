@@ -22,7 +22,7 @@ class Solution {
         }
 
         for (element in array) {
-            if (element and (1 shl posOfSetBit) != 0) {
+            if (element and (1 shl posOfSetBit) == 0) {
                 firstNumber = firstNumber xor element
             } else {
                 secondNumber = secondNumber xor element

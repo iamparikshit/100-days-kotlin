@@ -12,7 +12,6 @@ class Solution {
     }
 
     fun solveByRightShift(input : Int) : Int{
-        var index = 0
         var number = input
         var count = 0
         while(number != 0){
