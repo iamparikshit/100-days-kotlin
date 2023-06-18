@@ -1,7 +1,5 @@
 package bitManipulation.reverseBits
 
-import kotlin.math.pow
-
 class Solution {
     fun solve(input : UInt) : UInt {
         var reverseNo : UInt = 0u

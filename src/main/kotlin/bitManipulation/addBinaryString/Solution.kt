@@ -4,6 +4,10 @@ class Solution {
     fun addBinary(firstArray: String, secondArray: String): String {
         var secondInput = secondArray
         var firstInput = firstArray
+        var result = ""
+        var carry = 0
+        var sum: Int
+
         if(firstArray.length > secondArray.length){
             for(element in secondArray.length .. firstArray.lastIndex){
                 secondInput = "0$secondInput"
@@ -14,9 +18,6 @@ class Solution {
             }
         }
 
-        var result = ""
-        var carry = 0
-        var sum = 0
         for(index in firstInput.lastIndex downTo 0){
             sum = firstInput[index].digitToInt() + secondInput[index].digitToInt() + carry
             carry = sum / 2

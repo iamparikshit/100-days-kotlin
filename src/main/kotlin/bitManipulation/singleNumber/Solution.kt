@@ -4,7 +4,7 @@ class Solution {
     fun solve(array: IntArray): IntArray {
         var sumOfTwoSingleNumber = 0
         var posOfSetBit = 0
-        var index = 0;
+        var index = 0
         var firstNumber = 0
         var secondNumber = 0
 
@@ -15,7 +15,7 @@ class Solution {
         while (sumOfTwoSingleNumber > 0) {
             if (sumOfTwoSingleNumber and 1 == 1) {
                 posOfSetBit = index
-                break;
+                break
             }
             index++
             sumOfTwoSingleNumber = sumOfTwoSingleNumber shr 1
