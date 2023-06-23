@@ -1,6 +1,7 @@
 package p3.searchInsert
 
 import org.junit.jupiter.api.Test
+import p3.searchInsert.SearchInsert
 import kotlin.test.assertEquals
 
 //https://leetcode.com/problems/search-insert-position/
