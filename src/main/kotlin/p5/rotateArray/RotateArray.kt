@@ -2,8 +2,7 @@ package p5.rotateArray
 //https://leetcode.com/problems/rotate-array/
 class RotateArray {
     fun rotate(inputArray: IntArray, rotateIndex: Int): IntArray {
-        var indexForSlice = 0
-        indexForSlice = if (rotateIndex > inputArray.size) {
+        val indexForSlice: Int = if (rotateIndex > inputArray.size) {
             rotateIndex % inputArray.size
         } else {
             rotateIndex
