@@ -15,9 +15,9 @@ class SolutionTest{
     }
 
     @Test
-    fun `should return subtraction of 2nd max and 2nd min element`() {
-        val expected = 2
-        val result = solution.solve(intArrayOf(1,2,3,4,5), 2)
+    fun `should return subtraction of 22nd max and 22nd min element`() {
+        val expected = -97
+        val result = solution.solve(intArrayOf(34,7,96,37,12,13,22,86,17,78,95,61,42,1,42,58,98,78,92,85,10,97), 22)
 
         assertEquals(expected, result)
     }
