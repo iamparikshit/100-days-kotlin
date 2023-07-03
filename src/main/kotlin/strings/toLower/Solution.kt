@@ -3,8 +3,7 @@ package strings.toLower
 class Solution {
     fun toLower(inputArray: CharArray): CharArray {
         for (index in inputArray.indices) {
-            if ('A'.code <= inputArray[index].code && 'Z'.code >= inputArray[index].code) inputArray[index] =
-                inputArray[index] + 32
+            if (inputArray[index] in 'A'..'Z') inputArray[index] = 'a' + (inputArray[index] - 'A')
         }
         return inputArray
     }
