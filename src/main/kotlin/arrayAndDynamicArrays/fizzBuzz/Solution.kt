@@ -20,10 +20,10 @@ class Solution {
         var sampleString: String
 
         for(index in 1..input){
-            if(index % 15==0) sampleString = "FizzBuzz"
-            else if(index%3==0) sampleString ="Fizz"
-            else if(index%5==0) sampleString ="Buzz"
-            else sampleString=index.toString()
+            sampleString = if(index % 15==0) "FizzBuzz"
+            else if(index%3==0) "Fizz"
+            else if(index%5==0) "Buzz"
+            else index.toString()
 
             resultArray[index-1]=sampleString
         }
