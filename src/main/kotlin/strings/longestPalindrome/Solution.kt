@@ -5,13 +5,12 @@ class Solution {
         return ""
     }
 
-    fun String.isPalindrome() : Boolean{
+    fun String.isPalindrome(): Boolean {
         val length = this.length
         val mid = (length - 1) / 2
         var index = 0
-        while(index <= mid ){
-            if(this[index]==this[length-1]) continue
-            else return false
+        while (index <= mid) {
+            if (this[index] != this[length - 1 - index]) return false
             index++
         }
         return true
