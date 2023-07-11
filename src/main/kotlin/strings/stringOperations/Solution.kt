@@ -1,15 +1,18 @@
 package strings.stringOperations
 
+import java.lang.StringBuilder
+
 class Solution {
     fun solve(inputString: String): String {
-        var result = ""
+        val result = StringBuilder()
         for (index in inputString.indices) {
-            result = if (inputString[index].isVowel()) "$result#"
-            else if (inputString[index] in 'A'..'Z') continue
-            else "$result${inputString[index]}"
+            if (inputString[index] in 'a'..'z') {
+                if (inputString[index].isVowel()) result.append("#")
+                else result.append(inputString[index])
+            }
         }
-        result = "$result$result"
-        return result
+        result.append(result)
+        return result.toString()
     }
 
     private fun Char.isVowel(): Boolean {
