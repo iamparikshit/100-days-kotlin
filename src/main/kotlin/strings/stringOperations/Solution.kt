@@ -5,6 +5,7 @@ import java.lang.StringBuilder
 class Solution {
     fun solve(inputString: String): String {
         val result = StringBuilder()
+
         for (index in inputString.indices) {
             if (inputString[index] in 'a'..'z') {
                 if (inputString[index].isVowel()) result.append("#")
