@@ -10,6 +10,7 @@ class Solution {
             if (element == '(' || element == '{' || element == '[') {
                 result.push(element)
             } else {
+                if(result.size == 0) return false
                 value = when (result.peek()) {
                     '(' -> element == ')'
                     '{' -> element == '}'
@@ -21,6 +22,6 @@ class Solution {
                 else return false
             }
         }
-        return value
+        return result.size == 0
     }
 }
