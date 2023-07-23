@@ -5,16 +5,20 @@ class Solution {
         val map = mutableMapOf<Char, Int>()
         val secondMap = mutableMapOf<Char, Int>()
 
-        for (element in firstInput) {
-            if (map.containsKey(element)) map[element] = map.getValue(element) + 1
-            else map[element] = 1
+        for (index in firstInput.indices) {
+            if (map.containsKey(firstInput[index])) {
+                map[firstInput[index]] = map.getValue(firstInput[index]) + 1
+                if(secondMap.containsKey(secondInput[index])) secondMap[secondInput[index]] = secondMap.getValue(secondInput[index]) + 1
+                else return false
+                if(map.getValue(firstInput[index]) != secondMap.getValue(secondInput[index])) return false
+            }
+            else {
+                map[firstInput[index]] = 1
+                if(secondMap.containsKey(secondInput[index])) return false
+                secondMap[secondInput[index]] =1
+            }
         }
 
-        for (element in secondInput) {
-            if (secondMap.containsKey(element)) secondMap[element] = secondMap.getValue(element) + 1
-            else secondMap[element] = 1
-        }
-
-        return map.size == secondMap.size
+       return true
     }
 }
