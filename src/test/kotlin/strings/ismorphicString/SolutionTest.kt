@@ -24,7 +24,7 @@ internal class SolutionTest{
 
     @Test
     fun `should return true when string are isomorphic for 5 letters`() {
-        val expected = true
+        val expected = false
         val result = solution.isIsomorphic("bbbaaaba", "aaabbbba")
 
         assertEquals(expected, result)
