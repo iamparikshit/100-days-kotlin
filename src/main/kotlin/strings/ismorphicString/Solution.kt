@@ -26,7 +26,7 @@ class Solution {
         val n = firstString.length
         val arr1 = IntArray(256) { -1 }
         val arr2 = IntArray(256) { -1 }
-        for (i in 0..n-1) {
+        for (i in 0.. n-1) {
             val (x, y) = Pair(firstString[i].toInt(), secondString[i].toInt())
             if (arr1[x] != arr2[y]) return false
             arr1[x] = i
