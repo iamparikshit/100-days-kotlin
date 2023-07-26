@@ -3,50 +3,49 @@ package problemSolving.minimumTimeToArriveOnTime
 import kotlin.math.ceil
 
 class Solution {
-    fun minSpeedOnTime(dist: IntArray, hour: Double): Int {
-        if (dist.size - 1 > hour) return -1
-        var speed = 1
+    fun minSpeedOnTime(totalDistance: IntArray, hour: Double): Int {
+        if (totalDistance.size - 1 > hour) return -1
+        var minSpeed = 1
         var flag = true
-        var time: Double
+        var timeRequired: Double
+
         while (flag) {
-            time = 0.0
-            for (element in dist) {
-                time = ceil(time)
-                time += (element.toDouble() / speed)
+            timeRequired = 0.0
+            for (element in totalDistance) {
+                timeRequired = ceil(timeRequired)
+                timeRequired += (element.toDouble() / minSpeed)
             }
-            if (time <= hour) {
-                flag = false
-            } else speed++
+            if (timeRequired <= hour) flag = false else minSpeed++
         }
-        return speed
+        return minSpeed
     }
 
-    fun minSpeedOnTimeUsingBinarySearch(dist: IntArray, hour: Double): Int {
+    fun minSpeedOnTimeUsingBinarySearch(totalDistance: IntArray, hour: Double): Int {
         var minPossibleSpeed = 1
         var maxPossibleSpeed = 10000000
         var minSpeedOnTime = -1
-        var mid: Int
+        var midSpeed: Int
 
         while (minPossibleSpeed <= maxPossibleSpeed) {
-            mid = (minPossibleSpeed + maxPossibleSpeed) / 2
+            midSpeed = (minPossibleSpeed + maxPossibleSpeed) / 2
 
-            if (timeRequired(dist, mid) <= hour) {
-                minSpeedOnTime = mid
-                maxPossibleSpeed = mid - 1
+            if (totalDistance.timeRequiredWithSpeed(midSpeed) <= hour) {
+                minSpeedOnTime = midSpeed
+                maxPossibleSpeed = midSpeed - 1
             } else {
-                minPossibleSpeed = mid + 1
+                minPossibleSpeed = midSpeed + 1
             }
         }
 
         return minSpeedOnTime
     }
 
-    private fun timeRequired(dist: IntArray, speed: Int): Double {
-        var time = 0.0
-        for (element in dist) {
-            time = ceil(time)
-            time += element.toDouble() / speed
+    private fun IntArray.timeRequiredWithSpeed(speed : Int) : Double {
+        var timeRequired = 0.0
+        for (distance in this) {
+            timeRequired = ceil(timeRequired)
+            timeRequired += distance.toDouble() / speed
         }
-        return time
+        return timeRequired
     }
 }
