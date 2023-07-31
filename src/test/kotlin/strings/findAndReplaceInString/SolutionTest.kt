@@ -10,7 +10,7 @@ internal class SolutionTest{
     fun `should return with target if all sources matches`() {
         val expect = "eeebffff"
         val result = solution.findReplaceString(
-            inputString = "abcd",
+            s = "abcd",
             indices = intArrayOf(0, 2),
             sources = arrayOf("a", "cd"),
             targets = arrayOf("eee", "fff")
