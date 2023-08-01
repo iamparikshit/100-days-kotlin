@@ -23,6 +23,14 @@ internal class ConstructRectangleTest{
     }
 
     @Test
+    fun `should return 37,1 when area is 36`() {
+        val expect = intArrayOf(6,6)
+        val result = solution.constructRectangle(36)
+
+        assertArrayEquals(expect, result)
+    }
+
+    @Test
     fun `should return 4,3 when area is 12`() {
         val expect = intArrayOf(4,3)
         val result = solution.constructRectangle(12)
