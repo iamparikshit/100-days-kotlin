@@ -38,3 +38,7 @@ Here are some scenarios where the Singleton pattern may be appropriate:
  2. **Logging:** In logging frameworks, a Singleton pattern can be used to provide a single point of access to the logger instance throughout the application, ensuring consistent logging behavior and configuration.
 
  3. **Caching:** Singleton can be used to implement caching mechanisms where you want to maintain a single cache instance across the application to improve performance by storing frequently accessed data.
+
+### Additional Links :
+https://refactoring.guru/design-patterns/singleton
+https://medium.com/huawei-developers/kotlin-singleton-design-pattern-tutorial-with-example-ec6b523e7fca
