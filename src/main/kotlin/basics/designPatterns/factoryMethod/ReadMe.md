@@ -25,4 +25,3 @@ The idea is to create a factory class with a single responsibility to create obj
 
 ###  When to use it
 1. When you want to give extend its internal components
-2. 
